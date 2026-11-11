@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dulce Encanto · Pastelería artesanal en Guayaquil</title>
+<meta name="description" content="Pasteles, postres y porciones artesanales. Personaliza tu torta y pide con entrega a domicilio o retiro en local.">
+<link rel="icon" type="image/png" href="assets/logo-icon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== Sprite de iconos SVG ===== -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.3a1 1 0 0 0 1 .7h9.2a1 1 0 0 0 1-.8L20.5 8H6"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.7 7.1L4 20l1-4.5A8 8 0 1 1 21 12z"/><path d="M9 11h.01M12 11h.01M15 11h.01"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h11v10H2zM13 9h4l3 3v4h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 9l1.5-5h13L20 9M4 9v11h16V9M4 9c0 2 3 2 4 0 1 2 3 2 4 0 1 2 3 2 4 0 1 2 4 2 4 0M10 20v-6h4v6"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19M6 15h4"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.8 6.2.9-4.5 4.4 1.1 6.2L12 17.300 6.400 20.300l1.100-6.200L3 9.700l6.200-.9z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20S3 14.500 3 8.500A4.500 4.500 0 0 1 12 6.500 4.500 4.500 0 0 1 21 8.500C21 14.500 12 20 12 20z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2.500"/><path d="M3.500 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-chevron-l" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+  <symbol id="i-chevron-r" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3 3 10.500l7 3 3 7zM10 13.500 21 3"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.500 8-8 9-4.500-1-8-4-8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="12" rx="2"/><path d="M12 9v12M3 13h18M12 9c-3 0-4-5-1-5 2 0 1 5 1 5zm0 0c3 0 4-5 1-5-2 0-1 5-1 5z"/></symbol>
+  <symbol id="i-cake" viewBox="0 0 24 24"><path d="M4 20h16M5 20v-7h14v7M5 16.500c2 1.500 3 1.500 4 0 1 1.500 3 1.500 4 0 1 1.500 3 1.500 4 0M12 13V9M12 4c1 1 1.500 2 0 3-1.500-1-1-2 0-3z"/></symbol>
+  <symbol id="i-cupcake" viewBox="0 0 24 24"><path d="M6 12h12l-1.500 8h-9zM6 12a6 5 0 0 1 12 0M12 5V3"/></symbol>
+  <symbol id="i-slice" viewBox="0 0 24 24"><path d="M3 17 21 10V6L3 11zM3 11v6M3 14h18"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8v.5"/></symbol>
+  <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M4 20l1.300-4A8.500 8.500 0 1 1 8 18.700z"/><path d="M9 9c0 3 3 6 6 6l1-1.500-2-1-1 .8c-1-.5-2-1.500-2.500-2.500l.8-1-1-2z"/></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8.500c0-.3.200-.5.500-.5z"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.500" y="3.500" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".6"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></symbol>
+  <symbol id="i-package" viewBox="0 0 24 24"><path d="M3 8l9-5 9 5v8l-9 5-9-5zM3 8l9 5 9-5M12 13v8"/></symbol>
+  <symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 4H5v16h4M16 8l4 4-4 4M20 12H9"/></symbol>
+  <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16zM13.500 6.500l4 4"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6zM9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 19V5M8 7h7"/></symbol>
+  <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.500 0 2-1 1.500-2s-.5-2 1-2H17a4 4 0 0 0 4-4c0-5-4-10-9-10z"/><circle cx="8" cy="10" r="1"/><circle cx="12" cy="7.500" r="1"/><circle cx="16" cy="10" r="1"/></symbol>
+  <symbol id="i-cookie" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9 4 4 0 0 0 5 5 3 3 0 0 0 4 4z"/><circle cx="9" cy="10" r=".8"/><circle cx="8.500" cy="15" r=".8"/><circle cx="14" cy="15.500" r=".8"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></symbol>
+</svg>
+
+<!-- ===== Barra superior ===== -->
+<div class="topbar" id="topbar">
+  <svg class="ic"><use href="#i-sparkle"/></svg>
+  <span id="topbar-msg">Pedidos personalizados con 48 h de anticipación · Entrega en Guayaquil y Samborondón</span>
+  <svg class="ic"><use href="#i-sparkle"/></svg>
+</div>
+
+<!-- ===== Encabezado / Menú de navegación (elemento global) ===== -->
+<header class="site-header" id="header">
+  <div class="wrap header-in">
+    <a href="#/inicio" class="brand" aria-label="Dulce Encanto – Inicio"><img src="assets/logo.png" alt="Dulce Encanto, pastelería artesanal"></a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+      <a href="#/inicio" data-route="inicio">Inicio</a>
+      <a href="#/productos" data-route="productos">Productos</a>
+      <a href="#/pedidos" data-route="pedidos">Pedidos</a>
+      <a href="#/blog" data-route="blog">Blog</a>
+      <a href="#/contacto" data-route="contacto">Contacto</a>
+    </nav>
+
+    <div class="header-tools">
+      <button class="icon-btn" id="btn-search" aria-label="Buscar productos"><svg class="ic"><use href="#i-search"/></svg></button>
+      <a class="icon-btn" href="#/cuenta" id="btn-account" aria-label="Mi cuenta"><svg class="ic"><use href="#i-user"/></svg><span class="dot" id="account-dot" hidden></span></a>
+      <button class="icon-btn cart-btn" id="btn-cart" aria-label="Abrir carrito"><svg class="ic"><use href="#i-cart"/></svg><span class="badge" id="cart-count">0</span></button>
+      <button class="icon-btn burger" id="btn-burger" aria-label="Menú"><svg class="ic"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+
+  <!-- Buscador de productos (elemento global) -->
+  <div class="searchbar" id="searchbar" hidden>
+    <div class="wrap">
+      <div class="search-field">
+        <svg class="ic"><use href="#i-search"/></svg>
+        <input id="search-input" type="search" placeholder="Busca pasteles, postres, porciones…" autocomplete="off">
+        <button class="icon-btn small" id="search-close" aria-label="Cerrar búsqueda"><svg class="ic"><use href="#i-close"/></svg></button>
+      </div>
+      <div class="search-results" id="search-results"></div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Contenido (vistas) ===== -->
+<main id="view" tabindex="-1"></main>
+
+<!-- ===== Pie de página ===== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img class="foot-logo" src="assets/logo.png" alt="Dulce Encanto">
+        <p class="muted">Pastelería artesanal en Guayaquil. Hecha con mantequilla, paciencia y mucho cariño.</p>
+        <div class="social-row">
+          <a class="social" href="#/contacto" aria-label="Facebook"><svg class="ic"><use href="#i-facebook"/></svg></a>
+          <a class="social" href="#/contacto" aria-label="Instagram"><svg class="ic"><use href="#i-instagram"/></svg></a>
+          <a class="social" href="#/contacto" aria-label="WhatsApp"><svg class="ic"><use href="#i-whatsapp"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Explora</h4>
+        <a href="#/productos">Productos</a>
+        <a href="#/pedidos">Mi pedido</a>
+        <a href="#/blog">Blog de repostería</a>
+        <a href="#/cuenta">Mi cuenta</a>
+      </div>
+      <div>
+        <h4>Información</h4>
+        <button class="linklike" data-legal="terminos">Términos y condiciones</button>
+        <button class="linklike" data-legal="datos">Protección de datos</button>
+        <button class="linklike" data-legal="cookies">Política de cookies</button>
+        <button class="linklike" data-legal="faq">FAQ · Preguntas frecuentes</button>
+      </div>
+      <div>
+        <h4>Visítanos</h4>
+        <p class="muted"><svg class="ic sm"><use href="#i-pin"/></svg> Av. 9 de Octubre y Boyacá, Guayaquil</p>
+        <p class="muted"><svg class="ic sm"><use href="#i-phone"/></svg> 099 123 4567</p>
+        <p class="muted"><svg class="ic sm"><use href="#i-mail"/></svg> hola@dulceencanto.ec</p>
+        <p class="ssl"><svg class="ic sm"><use href="#i-lock"/></svg> Sitio seguro · SSL</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Dulce Encanto · Prototipo académico IHM · U1.S4</span>
+      <span>Hecho con <svg class="ic sm heart"><use href="#i-heart"/></svg> en Guayaquil</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== Carrito lateral (elemento global) ===== -->
+<div class="overlay" id="overlay" hidden></div>
+<aside class="drawer" id="drawer" aria-label="Carrito de compras" hidden>
+  <div class="drawer-head">
+    <h3><svg class="ic"><use href="#i-cart"/></svg> Tu carrito</h3>
+    <button class="icon-btn small" id="drawer-close" aria-label="Cerrar"><svg class="ic"><use href="#i-close"/></svg></button>
+  </div>
+  <div class="drawer-body" id="drawer-body"></div>
+  <div class="drawer-foot" id="drawer-foot"></div>
+</aside>
+
+<!-- ===== Chat en línea (elemento global) ===== -->
+<button class="chat-fab" id="chat-fab" aria-label="Abrir chat en línea"><svg class="ic"><use href="#i-chat"/></svg><span class="chat-pulse"></span></button>
+<section class="chat" id="chat" hidden aria-label="Chat en línea">
+  <div class="chat-head">
+    <div class="avatar"><svg class="ic"><use href="#i-cupcake"/></svg></div>
+    <div><strong>Chat Dulce Encanto</strong><small><i class="live"></i> En línea · responde en minutos</small></div>
+    <button class="icon-btn small" id="chat-close" aria-label="Cerrar chat"><svg class="ic"><use href="#i-close"/></svg></button>
+  </div>
+  <div class="chat-body" id="chat-body"></div>
+  <div class="chat-quick" id="chat-quick">
+    <button>¿Horarios?</button><button>¿Hacen delivery?</button><button>Quiero una torta</button><button>Formas de pago</button>
+  </div>
+  <form class="chat-form" id="chat-form">
+    <input id="chat-input" placeholder="Escribe tu mensaje…" autocomplete="off">
+    <button class="send" aria-label="Enviar"><svg class="ic"><use href="#i-send"/></svg></button>
+  </form>
+</section>
+
+<!-- ===== Modal genérico ===== -->
+<div class="modal-back" id="modal" hidden>
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="icon-btn small modal-x" id="modal-close" aria-label="Cerrar"><svg class="ic"><use href="#i-close"/></svg></button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<!-- ===== Aviso de cookies ===== -->
+<div class="cookies" id="cookies" hidden>
+  <div class="cookie-ic"><svg class="ic"><use href="#i-cookie"/></svg></div>
+  <p><strong>Usamos cookies</strong> para recordar tu carrito y mejorar tu experiencia. Puedes aceptar o configurar tu consentimiento. <button class="linklike inline" data-legal="cookies">Más información</button></p>
+  <div class="cookie-actions">
+    <button class="btn ghost sm" id="cookie-reject">Solo necesarias</button>
+    <button class="btn sm" id="cookie-accept">Aceptar todas</button>
+  </div>
+</div>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script src="js/data.js"></script>
+<script src="js/art.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
